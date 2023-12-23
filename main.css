@@ -1,0 +1,70 @@
+.navbar-brand {
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-size: 2.5em;
+    cursor: default;
+    margin-top: 5vh;
+}
+
+main {
+    font-family: "Roboto", sans-serif;
+}
+
+.nav {
+    background-color: white;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+}
+
+.card-title,
+.card-body {
+    font-family: "Roboto", sans-serif;
+    color: black;
+}
+
+body {
+    background-color: #030303 !important;
+    font-family: "Roboto", sans-serif;
+}
+
+.lead {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    color: #c0c0c0;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: rgba(156, 18, 165, 0.9);
+    border-color: rgba(156, 18, 165, 0.9);
+}
+
+.btn-primary,
+.btn-primary:focus {
+    background-color: rgb(156, 18, 165);
+    border-color: rgb(156, 18, 165);
+}
+
+img {
+    max-width: 100%;
+}
+
+.logo {
+    max-height: 70px;
+}
+
+a {
+    color: rgb(156, 18, 165);
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+a:hover {
+    color: rgba(156, 18, 165, 0.9);
+}
