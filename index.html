@@ -36,13 +36,13 @@
             </header>
         </div>
 
-        <div class="row">
+        <div class="row d-flex">
             <main class="mb-3">
                 <h1>Hidden access for the worthy.<br>Think you've got the key?</h1>
                 <p class="lead">Go ahead, hack this site and get access to our exclusive hacking community!</p>
             </main>
         </div>
-
+<!-- 
         <div class="row d-flex justify-content-center mt-5">
             <div class="col-md-7 col-12">
                 <div class="input-group mb-3">
@@ -54,7 +54,7 @@
             <div class="text-break" style="width: 100%;">
                 <p class="lead"><b id="secret_link"></b></p>
             </div>
-        </div>
+        </div> -->
 
         <div class="row position-relative bottom-0 start-50 translate-middle-x">
             <footer class="mt-auto pt-5">
@@ -69,8 +69,8 @@
 
 <script>
     function decrypt() {
-        var access_key = document.getElementById('access_key').value
-        var secret_link = document.getElementById('secret_link')
+        // var access_key = document.getElementById('access_key').value
+        // var secret_link = document.getElementById('secret_link')
 
         makePostRequest("https://us-central1-wandanetworks.cloudfunctions.net/ValidateKey", { "access_key": access_key })
             .then(res => { secret_link.innerHTML = res })
@@ -99,7 +99,7 @@
     }
 
     console.log("© 2024 %cWanda %cNetworks", "color:#FF0000", "color:#9C12A5");
-    console.log("Crack our code and unlock the door to our elite cyber crew.");
+    console.log("Go ahead, hack this site and get access to our exclusive hacking community!");
 </script>
 
 </html>
