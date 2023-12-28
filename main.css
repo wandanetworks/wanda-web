@@ -69,7 +69,13 @@ a:hover {
     color: rgba(156, 18, 165, 0.9);
 }
 
-.container {
+.wrapper {
     background-color: white;
     max-width: 960px;
+    min-height: 100vh;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
 }

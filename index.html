@@ -24,39 +24,39 @@
     <link href="./main.css" rel="stylesheet">
 </head>
 
-<body class="d-flex h-100 text-center">
-    <div class="container">
-        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-            <header class="m-x4 my-5">
-                <div class="row">
-                    <span class="navbar-brand m-0">
-                        <img src="static/branding/iso-logo.png" alt="Wanda Networks Logo"
-                            class="d-inline-block align-text-top logo">
-                    </span>
-                </div>
-            </header>
+<body>
+    <div class="container wrapper d-flex text-center mx-auto flex-column shadow">
 
-            <main class="container px-3 mb-3">
+        <div class="row">
+            <header class="my-5">
+                <span class="navbar-brand m-0">
+                    <img src="static/branding/iso-logo.png" alt="Wanda Networks Logo"
+                        class="d-inline-block align-text-top logo">
+                </span>
+            </header>
+        </div>
+
+        <div class="row">
+            <main class="mb-3">
                 <h1>Hidden access for the worthy.<br>Think you've got the key?</h1>
                 <p class="lead">Go ahead, hack this site and get access to our exclusive hacking community!</p>
             </main>
+        </div>
 
-            <div class="container">
-                <div class="row d-flex justify-content-center mt-5">
-                    <div class="col-md-7 col-12">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Access Key" aria-label="Access Key"
-                                aria-describedby="button-addon" id="access_key">
-                            <button class="btn btn-primary" type="button" id="button-addon"
-                                onclick="decrypt()">Submit</button>
-                        </div>
-                    </div>
-                    <div class="text-break" style="width: 100%;">
-                        <p class="lead"><b id="secret_link"></b></p>
-                    </div>
+        <div class="row d-flex justify-content-center mt-5">
+            <div class="col-md-7 col-12">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Access Key" aria-label="Access Key"
+                        aria-describedby="button-addon" id="access_key">
+                    <button class="btn btn-primary" type="button" id="button-addon" onclick="decrypt()">Submit</button>
                 </div>
-
             </div>
+            <div class="text-break" style="width: 100%;">
+                <p class="lead"><b id="secret_link"></b></p>
+            </div>
+        </div>
+
+        <div class="row position-absolute bottom-0 start-50 translate-middle-x">
             <footer class="mt-auto pt-5">
                 <div class="text-center p-3 lead">
                     <span>© 2024 Copyright<br><b>contact@wandanetworks.com</b></span>
