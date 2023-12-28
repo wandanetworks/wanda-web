@@ -24,7 +24,7 @@ main {
 
 body {
     color: black;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif !important;
     background: url(static/images/strip.png);
 }
 
