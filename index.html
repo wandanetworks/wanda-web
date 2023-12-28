@@ -24,44 +24,45 @@
     <link href="./main.css" rel="stylesheet">
 </head>
 
-<body class="d-flex h-100 text-center text-white">
+<body class="d-flex h-100 text-center">
+    <div class="container">
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="m-x4 my-5">
+                <div class="row">
+                    <span class="navbar-brand m-0">
+                        <img src="static/branding/iso-logo.png" alt="Wanda Networks Logo"
+                            class="d-inline-block align-text-top logo">
+                    </span>
+                </div>
+            </header>
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="m-x4 my-5">
-            <div class="row">
-                <span class="navbar-brand m-0">
-                    <img src="static/branding/iso-logo.png" alt="Wanda Networks Logo"
-                        class="d-inline-block align-text-top logo">
-                </span>
-            </div>
-        </header>
+            <main class="container px-3 mb-3">
+                <h1>Hidden access for the worthy.<br>Think you've got the key?</h1>
+                <p class="lead">Go ahead, hack this site and get access to our exclusive hacking community!</p>
+            </main>
 
-        <main class="container px-3 mb-3">
-            <h1>Hidden access for the worthy. Think you've got the key?</h1>
-            <p class="lead">Go ahead, hack this site and get access to our exclusive hacking community!</p>
-        </main>
-
-        <div class="container">
-            <div class="row d-flex justify-content-center mt-5">
-                <div class="col-lg-6 col-12">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Access Key" aria-label="Access Key"
-                            aria-describedby="button-addon" id="access_key">
-                        <button class="btn btn-primary" type="button" id="button-addon"
-                            onclick="decrypt()">Submit</button>
+            <div class="container">
+                <div class="row d-flex justify-content-center mt-5">
+                    <div class="col-md-7 col-12">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Access Key" aria-label="Access Key"
+                                aria-describedby="button-addon" id="access_key">
+                            <button class="btn btn-primary" type="button" id="button-addon"
+                                onclick="decrypt()">Submit</button>
+                        </div>
+                    </div>
+                    <div class="text-break" style="width: 100%;">
+                        <p class="lead"><b id="secret_link"></b></p>
                     </div>
                 </div>
-                <div class="text-break" style="width: 100%;">
-                    <a href="#" id="secret_link"></a>
-                </div>
-            </div>
 
-        </div>
-        <footer class="mt-auto pt-5 text-white-50">
-            <div class="text-center p-3 lead">
-                <span style="color: white;">© 2024 Copyright<br><b>contact@wandanetworks.com</b></span>
             </div>
-        </footer>
+            <footer class="mt-auto pt-5">
+                <div class="text-center p-3 lead">
+                    <span>© 2024 Copyright<br><b>contact@wandanetworks.com</b></span>
+                </div>
+            </footer>
+        </div>
     </div>
 
 </body>
@@ -72,11 +73,7 @@
         var secret_link = document.getElementById('secret_link')
 
         makePostRequest("https://us-central1-wandanetworks.cloudfunctions.net/ValidateKey", { "access_key": access_key })
-            .then(res => {
-                secret_link.href = res
-                secret_link.text = res
-
-            })
+            .then(res => { secret_link.innerHTML = res })
     }
 
     async function makePostRequest(url, data) {

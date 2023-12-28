@@ -1,7 +1,6 @@
 .navbar-brand {
     font-weight: 500;
     font-family: "Roboto", sans-serif;
-    color: white;
     font-size: 2.5em;
     cursor: default;
     margin-top: 5vh;
@@ -24,15 +23,16 @@ main {
 }
 
 body {
-    background-color: #030303 !important;
+    color: black;
     font-family: "Roboto", sans-serif;
+    background: url(static/images/strip.png);
 }
 
 .lead {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-size: 1.5em;
-    color: #c0c0c0;
+    color: #030303;
 }
 
 .card-title {
@@ -67,4 +67,9 @@ a {
 
 a:hover {
     color: rgba(156, 18, 165, 0.9);
+}
+
+.container {
+    background-color: white;
+    max-width: 960px;
 }
