@@ -42,19 +42,6 @@
                 <p class="lead">Go ahead, hack this site and get access to our exclusive hacking community!</p>
             </main>
         </div>
-<!-- 
-        <div class="row d-flex justify-content-center mt-5">
-            <div class="col-md-7 col-12">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Access Key" aria-label="Access Key"
-                        aria-describedby="button-addon" id="access_key">
-                    <button class="btn btn-primary" type="button" id="button-addon" onclick="decrypt()">Submit</button>
-                </div>
-            </div>
-            <div class="text-break" style="width: 100%;">
-                <p class="lead"><b id="secret_link"></b></p>
-            </div>
-        </div> -->
 
         <div class="row position-relative bottom-0 start-50 translate-middle-x">
             <footer class="mt-auto pt-5">
@@ -68,12 +55,9 @@
 </body>
 
 <script>
-    function decrypt() {
-        // var access_key = document.getElementById('access_key').value
-        // var secret_link = document.getElementById('secret_link')
-
-        makePostRequest("https://us-central1-wandanetworks.cloudfunctions.net/ValidateKey", { "access_key": access_key })
-            .then(res => { secret_link.innerHTML = res })
+    function decrypt(key) {
+        makePostRequest("https://us-central1-wandanetworks.cloudfunctions.net/ValidateKey", { "key": key })
+            .then(res => { console.log(res) })
     }
 
     async function makePostRequest(url, data) {
